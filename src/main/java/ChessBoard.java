@@ -4,7 +4,11 @@ import java.util.List;
 public class ChessBoard {
     List<Pawn> boardPieces = new ArrayList<>();
 
-    List getPieces (){
+    List<Pawn> getPieces (){
         return boardPieces;
+    }
+
+    public void addPiece(Pawn pawn) {
+        boardPieces.add(pawn);
     }
 }
