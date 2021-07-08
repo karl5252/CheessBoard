@@ -1,14 +1,11 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNot.not;
 
@@ -30,18 +27,22 @@ public class ChessBoardTest {
 
     }
     @Test
-    void shouldChessboardBeCreatedNoPiecesAreOnIt(){
+    void shouldChessboardBeCreatedPiecesAreOnIt(){
 
-        assertThat(chessboard.getPieces().size(),is(0));
+        assertThat(chessboard.getPieces().size(),is(16));
 
     }
-    @Test
+
+
+    /*@Test
     void shouldPiecesCountGrowWhenPieceIsAdded(){
-        chessboard.addPiece(new Pawn());
+        chessboard.addPiece(new ChessPieces.Pawn());
 
         assertThat(chessboard.getPieces().size(),greaterThan(0));
 
-    }
+    }*/
+
+
     @Disabled
     /*@ParameterizedTest
     @MethodSource("createPiecesFOrBoard")
